@@ -40,7 +40,10 @@
     ]
   },
   "scripts": {
-    "build": "babel src -d lib --ignore templates",
-    "test": "eslint . && npm test"
+    "clear": "rm -rf lib && mkdir lib",
+    "copy": "cp -r src/templates lib",
+    "build": "babel src -d lib --ignore src/templates",
+    "test": "eslint .",
+    "prepare": "npm test && npm run clear && npm run build && npm run copy"
   }
 }

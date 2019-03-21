@@ -1,0 +1,62 @@
+{
+  "global": {
+    "_items": <%- IS_SINGLE_PAGE ? "[\"xorh94f\"]" : "[\"dtb9ikg\", \"3nsk031\"]" %>,
+    "logo": "sissi.svg",
+    "title": "<%=PROJECT_NAME%>",
+    "welcomeText": "It's gonna be fantastic, I can feel it."
+  },
+  <%_ if (IS_SINGLE_PAGE) { _%>
+  "pages": {
+    "xorh94f": {
+      "_id": "xorh94f",
+      "_items": ["mu3v3n2", "3qoeqgy"],
+      "_type": "standard",
+      "path": ""
+    }
+  },
+  <%_ } else { _%>
+  "pages": {
+    "dtb9ikg": {
+      "_id": "dtb9ikg",
+      "_items": [
+        "mu3v3n2",
+        "3qoeqgy"
+      ],
+      "_type": "standard",
+      "path": "",
+      "title": "About sissi"
+    },
+    "3nsk031": {
+      "_id": "3nsk031",
+      "_items": [
+        "i3ojloy"
+      ],
+      "_type": "standard",
+      "path": "about-you",
+      "title": "About You"
+    }
+  },
+  <%_ } _%>
+  "sections": {
+    <%_ if (!IS_SINGLE_PAGE) { _%>
+    "i3ojloy": {
+      "_id": "i3ojloy",
+      "_type": "standard",
+      "title": "Hey, I like you",
+      "sectionBody": "<p>Has anybody told you that you&#39;re awesome today? You&#39;re awesome! And you&#39;re doing great work. You being here and reading this proves it.<\/p>\n<p>(Ok, maybe not the reading part. Time to write your own stuff now, don&#39;t you think?)<\/p>\n"
+    },
+    <%_ } _%>
+    "mu3v3n2": {
+      "_id": "mu3v3n2",
+      "_type": "standard",
+      "title": "sissi, pleased to meet you.",
+      "sectionBody": "<p>I&#39;m your simple static sites generator and happy to help if you need me. Please visit me over at <a href=\"https:\/\/github.com\/square-a\/sissi\">Github<\/a> for support.<\/p>\n<p>Now, let&#39;s get to work and have some fun!<\/p>\n"
+    },
+    "3qoeqgy": {
+      "_id": "3qoeqgy",
+      "_type": "standard",
+      "title": "My folks",
+      "sectionBody": "<p><img src=\"\/images\/a-square.svg\" alt=\"A square logo\"><\/p>\n<p>While we&#39;re at introductions \u2013 why not say hi to my lovely creators at <a href=\"https:\/\/a-square.eu\">A square<\/a>?<\/p>\n"
+    }
+  }
+}
