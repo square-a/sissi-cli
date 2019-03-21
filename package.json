@@ -17,7 +17,30 @@
     "cli"
   ],
   "main": "lib/index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "eslint": "^5.15.3",
+    "eslint-config-zweitag": "^1.0.3",
+    "eslint-import-resolver-alias": "^1.1.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "yeoman-environment": "^2.3.4",
+    "yeoman-generator": "^3.2.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
   "scripts": {
-    "test": "npm test"
+    "build": "babel src -d lib --ignore templates",
+    "test": "eslint . && npm test"
   }
 }

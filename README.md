@@ -1,6 +1,6 @@
 # sissi – simple static sites
 
-<img src='/src/templates/public/images/sissi.svg'  width='160px' />
+<img src='sissi.png'  width='160px' />
 
 Hi, I’m sissi. It’s a pleasure to meet you!
 
