@@ -1,9 +1,6 @@
 import path from 'path';
 import Generator from 'yeoman-generator';
-import {
-  execFile,
-  execSync,
-} from 'child_process';
+import { execSync } from 'child_process';
 
 import {
   getCopyList,
@@ -91,18 +88,13 @@ export default class SissiGenerator extends Generator {
   install() {
     console.log('Installing dependencies');
 
-    const sissiMoves = execFile(path.join(__dirname, '../node_modules/.bin/sissi-moves'), [
-      'hash',
-      '--doSave=true',
-    ]);
-    sissiMoves.stderr.on('data', err => console.log(err));
-    sissiMoves.stdout.on('data', out => console.log(out));
-
-    this.npmInstall(undefined, { silent: true });
+    this.npmInstall('sissi-core', { silent: true, save: true });
   }
 
   // eslint-disable-next-line class-methods-use-this
   end() {
+    execSync('npm run hash');
+
     try {
       execSync('git init', { stdio: 'ignore' });
       execSync('git add -A', { stdio: 'ignore' });
