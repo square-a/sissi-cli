@@ -3,8 +3,12 @@ node_modules
 .sthash
 
 /build
+
 /public/images
-/tmp
+/public/_tmp
+/public/sissi-styles.css
+/public/_tmp/sissi-script.js
+
 /config.json
 /content.json
 /content.json.backup
