@@ -1,14 +1,14 @@
-import path from 'path';
-import Generator from 'yeoman-generator';
-import { execSync } from 'child_process';
+const path = require('path');
+const Generator = require('yeoman-generator');
+const { execSync } = require('child_process');
 
-import {
+const {
   getCopyList,
   getTemplateList,
-} from './fileLists';
-import * as v from './validators';
+} = require('./fileLists');
+const v = require('./validators');
 
-export default class SissiGenerator extends Generator {
+module.exports = class SissiGenerator extends Generator {
   constructor(args, opts) {
     super(args, opts);
 
@@ -93,8 +93,6 @@ export default class SissiGenerator extends Generator {
 
   // eslint-disable-next-line class-methods-use-this
   end() {
-    execSync('npm run hash');
-
     try {
       execSync('git init', { stdio: 'ignore' });
       execSync('git add -A', { stdio: 'ignore' });
@@ -103,4 +101,4 @@ export default class SissiGenerator extends Generator {
     // eslint-disable-next-line no-empty
     } catch (e) {}
   }
-}
+};

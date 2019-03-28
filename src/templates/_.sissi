@@ -1,7 +1,4 @@
 {
-  "buildDir": "build",
-  "tmpDir": "tmp",
-
   "cmsPort": 3010,
   "devPort": 3000
 }

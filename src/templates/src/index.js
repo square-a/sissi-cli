@@ -1,4 +1,4 @@
-import { render } from 'sissi-guides';
+import { render } from 'sissi-core';
 
 import content from '../content.json';
 import Page from './components/Page';
