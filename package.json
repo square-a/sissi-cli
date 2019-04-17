@@ -21,16 +21,16 @@
   },
   "main": "lib/index.js",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "eslint": "^5.15.3",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.16.0",
     "eslint-config-zweitag": "^1.0.3",
     "eslint-import-resolver-alias": "^1.1.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.0",
+    "@babel/polyfill": "^7.4.3",
     "minimist": "^1.2.0",
     "yeoman-environment": "^2.3.4",
     "yeoman-generator": "^3.2.0"
@@ -52,9 +52,8 @@
   },
   "scripts": {
     "clear": "rm -rf lib && mkdir lib",
-    "copy": "cp -r src/templates lib",
-    "build": "babel src -d lib --ignore src/templates",
+    "build": "babel src -d lib --ignore src/templates --copy-files",
     "test": "eslint .",
-    "prepare": "npm test && npm run clear && npm run build && npm run copy"
+    "prepublishOnly": "npm test && npm run clear && npm run build"
   }
 }
