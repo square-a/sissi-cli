@@ -1,6 +1,6 @@
 {
   "name": "sissi-cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Command line interface for sissi (simple static sites)",
   "license": "GPL-3.0-or-later",
   "author": "A square",
@@ -16,6 +16,9 @@
     "static-site-generator",
     "cli"
   ],
+  "bin": {
+    "sissi": "./bin/run"
+  },
   "main": "lib/index.js",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
