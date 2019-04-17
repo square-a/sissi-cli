@@ -1,4 +1,4 @@
-const exec = require('child_process').exec;
+const spawn = require('child_process').spawn;
 const yeoman = require('yeoman-environment');
 const packageJson = require('../package.json');
 
@@ -19,19 +19,19 @@ module.exports = function run(args, flags) {
 
     case 'start':
       try {
-        exec('sissi-core start');
+        spawn('node_modules/.bin/sissi-core', ['start'], { stdio: 'inherit' });
       } catch (error) {
         console.log('I have trouble running this command. Are you sure you\'re in a sissi project folder?');
       }
-      return;
+      break;
 
     case 'dev':
       try {
-        exec('sissi-core dev');
+        spawn('node_modules/.bin/sissi-core', ['dev'], { stdio: 'inherit' });
       } catch (error) {
         console.log('I have trouble running this command. Are you sure you\'re in a sissi project folder?');
       }
-      return;
+      break;
 
     default:
       console.log('Sorry, I don\'t understand.');

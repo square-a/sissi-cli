@@ -1,6 +1,6 @@
 {
   "name": "sissi-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Command line interface for sissi (simple static sites)",
   "license": "GPL-3.0-or-later",
   "author": "A square",
