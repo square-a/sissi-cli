@@ -21,8 +21,8 @@ const Page = ({
     <nav className='sissi-nav'>
       {pages.map(navPage => (
         <SissiLink
-          key={navPage.path}
-          to={`/${navPage.path}`}
+          key={navPage._path}
+          to={`/${navPage._path}`}
           className='sissi-nav-link'
           activeClassName='sissi-nav-link--active'
           exact

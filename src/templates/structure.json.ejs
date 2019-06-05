@@ -4,13 +4,6 @@
     "language": "en"
   },
   "fields": {
-    <%_ if (!IS_SINGLE_PAGE) { _%>
-    "path": {
-      "label": "Path",
-      "placeholder": "about-me",
-      "type": "string"
-    },
-    <%_ } _%>
     "logo": {
       "label": "Logo",
       "type": "image"
@@ -40,7 +33,7 @@
   "pages": {
     "standard": {
       "label": "Standard page",
-      "fields": ["title", "path"],
+      "fields": ["title"],
       "maxItems": 4,
       "minItems": 1
     }
